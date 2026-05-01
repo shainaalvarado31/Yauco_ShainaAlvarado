@@ -15,84 +15,88 @@
 </head>
 <body>
 
-    <header class="header no-margin">
-        <div class="contenedor">
-            <div class="barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-text">
-                        Visita <span class="logo__bold">Yauco</span>
-                    </h1>
-                </a>
+<header class="header no-margin">
+    <div class="contenedor">
+        <div class="barra">
+            <a class="logo" href="index.html">
+                <h1 class="logo__nombre no-margin centrar-text">
+                    Visita <span class="logo__bold">Yauco</span>
+                </h1>
+            </a>
 
-                <nav class="navegacion">
-                    <a href="atractivos.html" class="enlace_nav">Atractivos</a>
-                    <a href="gastronomia.html" class="enlace_nav">Gastronomía</a>
-                    <a href="contacto.html" class="enlace_nav">Contáctanos</a>
-                </nav>
-            </div>
+            <nav class="navegacion">
+                <a href="atractivos.html" class="enlace_nav">Atractivos</a>
+                <a href="gastronomia.html" class="enlace_nav">Gastronomía</a>
+                <a href="contacto.html" class="enlace_nav">Contáctanos</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header__text">
+        <h2 class="no-margin">Descubre <span class="yauco">Yauco</span></h2>
+        <p class="subtitulo">La Ciudad del Café</p>
+    </div>
+</header>
+
+<main class="contenedor">
+    <h2 class="centrar-text no-margin">Contáctanos</h2>
+
+    <div class="contacto-bg"></div>
+
+    <form class="formulario">
+        <div class="campo">
+            <input 
+                class="campo__field"
+                type="text"
+                placeholder="Nombre"
+                id="nombre"
+            >
         </div>
 
-        <div class="header__text">
-    <h2 class="no-margin">Descubre <span class="yauco">Yauco</span></h2>
-    <p class="subtitulo">La Ciudad del Café</p>
-</div>
-    </header>
-
-    <main class="contenedor">
-        <h3 class="centrar-text no-margin">Contáctanos</h3>
-
-        <div class="contacto-bg"></div>
-
-        <form class="formulario">
-            <div class="campo">
-                <input
-                    class="campo__field"
-                    type="text"
-                    placeholder="Nombre"
-                    id="nombre"
-                >
-            </div>
-
-            <div class="campo">
-                <input
-                    class="campo__field"
-                    type="email"
-                    placeholder="E-mail"
-                    id="email"
-                >
-            </div>
-
-            <div class="campo">
-                <textarea
-                    class="campo__field campo__field--textarea"
-                    placeholder="Mensaje"
-                    id="mensaje"
-                ></textarea>
-            </div>
-
-            <div class="campo">
-                <input type="submit" value="Enviar" class="boton boton--primario">
-            </div>
-        </form>
-    </main>
-
-    <footer class="footer">
-        <div class="contenedor no-padding">
-            <div class="no-padding barra">
-                <a class="logo" href="index.html">
-                    <h1 class="logo__nombre no-margin centrar-text">
-                        <span class="logo__bold">Yauco</span>
-                    </h1>
-                </a>
-
-                <nav class="navegacion">
-                    <a href="atractivos.html" class="enlace_nav">Atractivos</a>
-                    <a href="gastronomia.html" class="enlace_nav">Gastronomía</a>
-                    <a href="contacto.html" class="enlace_nav">Contáctanos</a>
-                </nav>
-            </div>
+        <div class="campo">
+            <input 
+                class="campo__field"
+                type="email"
+                placeholder="E-mail"
+                id="email"
+            >
         </div>
-    </footer>
+
+        <div class="campo">
+            <textarea 
+                class="campo__field campo__field--textarea"
+                placeholder="Mensaje"
+                id="mensaje"
+            ></textarea>
+        </div>
+
+        <div class="campo">
+            <input 
+                type="submit"
+                value="Enviar"
+                class="boton boton--primario"
+            >
+        </div>
+    </form>
+</main>
+
+<footer class="footer">
+    <div class="contenedor no-padding">
+        <div class="no-padding barra">
+            <a class="logo" href="index.html">
+                <h1 class="logo__nombre no-margin centrar-text">
+                    <span class="logo__bold">Yauco</span>
+                </h1>
+            </a>
+
+            <nav class="navegacion">
+                <a href="atractivos.html" class="enlace_nav">Atractivos</a>
+                <a href="gastronomia.html" class="enlace_nav">Gastronomía</a>
+                <a href="contacto.html" class="enlace_nav">Contáctanos</a>
+            </nav>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
