@@ -531,6 +531,10 @@ h4 {
 
     box-shadow: var(--sombraMedia);
 }
+/* Separación entre el título principal de Atractivos y la sección Yaucromatic */
+.main__text main > h2 {
+    margin-bottom: 4rem;
+}
 
 /* Ajuste para separar textos e imágenes en atractivos */
 .atractivo_individual {
