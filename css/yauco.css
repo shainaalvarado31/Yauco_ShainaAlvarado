@@ -2,23 +2,30 @@
     --fuenteHeading: 'Poppins', sans-serif;
     --fuenteParrafo: 'Inter', sans-serif;
 
-    --verdePrincipal: #2c6645;
-    --verdeOscuro: #1f4f35;
-    --verdeSuave: #dfe9e4;
-    --verdeClaro: #edf3ee;
-    --dorado: #c49b3c;
+    /* NUEVOS COLORES YAUCO */
+    --negro: #111111;
+    --negroSuave: #1d1d1d;
+
+    --dorado: #d4a017;
     --doradoOscuro: #8d6a17;
-    --textoOscuro: #243129;
+    --doradoClaro: #f4d35e;
+
+    --fondoClaro: #f5f2ea;
+    --fondoSecundario: #ece4d2;
+
+    --textoOscuro: #202020;
     --blanco: #ffffff;
     --grisClaro: #e5e7eb;
 
     --sombraSuave: 0 12px 30px rgba(0, 0, 0, 0.08);
     --sombraMedia: 0 14px 32px rgba(0, 0, 0, 0.12);
+
     --radioGrande: 2.4rem;
     --radioMedio: 1.6rem;
 }
 
 /* Globales */
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -33,7 +40,14 @@ html {
 
 body {
     margin: 0;
-    background: linear-gradient(180deg, #e7efe9 0%, #dfe9e4 45%, #d6e3dc 100%);
+
+    background: linear-gradient(
+        180deg,
+        #f7f0dc 0%,
+        #ecd9a4 45%,
+        #e2c46b 100%
+    );
+
     color: var(--textoOscuro);
     font-family: var(--fuenteParrafo);
     font-size: 1.6rem;
@@ -47,6 +61,7 @@ a {
 img {
     max-width: 100%;
     display: block;
+    height: auto;
 }
 
 p {
@@ -74,7 +89,7 @@ h4 {
     line-height: 1.15;
     margin: 0;
     letter-spacing: -0.02em;
-    color: var(--verdePrincipal);
+    color: var(--negro);
 }
 
 h1 {
@@ -115,45 +130,46 @@ h4 {
 }
 
 /* Header */
+
 .header {
     min-height: 20rem;
-    background: linear-gradient(180deg, #eef4f0 0%, #dfe9e4 100%);
+
+    background: linear-gradient(
+        180deg,
+        #f8f5ef 0%,
+        #efe7d4 100%
+    );
+
     position: relative;
     overflow: visible;
-}
-
-.header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: transparent;
-}
-
-.header .contenedor,
-.header__text {
-    position: relative;
-    z-index: 2;
 }
 
 .barra {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     margin-top: 2rem;
+
     padding: 2rem 2.6rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     gap: 2rem;
+
     background: rgba(255, 255, 255, 0.72);
+
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(44, 102, 69, 0.08);
+
     border-radius: 2rem;
+
     box-shadow: var(--sombraSuave);
 }
 
 .logo {
-    color: var(--verdePrincipal);
+    color: var(--negro);
 }
 
 .logo__nombre {
@@ -163,7 +179,7 @@ h4 {
 
 .logo__bold {
     font-weight: 800;
-    color: var(--verdePrincipal);
+    color: var(--dorado);
 }
 
 .navegacion {
@@ -174,17 +190,24 @@ h4 {
 
 .enlace_nav {
     display: inline-block;
+
     color: var(--textoOscuro);
+
     font-size: 1.8rem;
     font-weight: 500;
+
     padding: 1.2rem 1.8rem;
+
     border-radius: 1.2rem;
-    transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                transform 0.2s ease;
 }
 
 .enlace_nav:hover {
-    background: rgba(44, 102, 69, 0.10);
-    color: var(--verdePrincipal);
+    background: rgba(212,160,23,0.15);
+    color: var(--negro);
     transform: translateY(-1px);
 }
 
@@ -194,38 +217,44 @@ h4 {
 }
 
 .header__text h2 {
-    color: var(--verdePrincipal);
+    color: var(--negro);
     font-size: 5.2rem;
 }
 
+.yauco {
+    font-weight: 800;
+    color: var(--dorado);
+    letter-spacing: -0.01em;
+}
+
+.subtitulo {
+    font-size: 2rem;
+    color: #6b6252;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
 /* Main */
+
 .main__text {
     padding: 3rem 0 2rem 0;
 }
 
 .main__text main {
     background: rgba(255, 255, 255, 0.50);
+
     backdrop-filter: blur(4px);
+
     border-radius: var(--radioGrande);
+
     padding: 5rem 4rem;
+
     box-shadow: var(--sombraSuave);
 }
 
-.main__text h2 {
-    margin-bottom: 2rem;
-}
+/* Bloques */
 
-.main__text p {
-    max-width: 110rem;
-}
-
-.yauco {
-    font-weight: 800;
-    color: var(--verdePrincipal);
-    letter-spacing: -0.01em;
-}
-
-/* Bloques principales */
 .simbolo_bloque,
 #map,
 .lista_destacados,
@@ -241,107 +270,75 @@ h4 {
 }
 
 .simbolo_bloque--bandera {
-    background: linear-gradient(135deg, #f3f6d8 0%, #f5e182 100%);
+    background: linear-gradient(
+        135deg,
+        #f7df8b 0%,
+        #f5e7b7 100%
+    );
 }
 
 .simbolo_bloque--escudo {
-    background: linear-gradient(135deg, #edf3ee 0%, #dce9df 100%);
+    background: linear-gradient(
+        135deg,
+        #f7f1e2 0%,
+        #eadab4 100%
+    );
+}
+
+/* Ajustes index: bandera, escudo, mapa y separación */
+.simbolo_bloque {
+    margin: 5rem 0;
+    padding: 3rem;
 }
 
 .simbolo_contenido {
     display: grid;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
-    margin-top: 1rem;
-    grid-template-columns: 1.2fr 1fr;
 }
 
-.simbolo_imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (min-width: 768px) {
+    .simbolo_contenido {
+        grid-template-columns: 1.1fr 1fr;
+    }
 }
 
 .simbolo_imagen img {
     width: 100%;
-    max-width: 65rem;
-    border-radius: 1.6rem;
-    background-color: rgba(255, 255, 255, 0.50);
-    padding: 1.2rem;
-    box-shadow: var(--sombraMedia);
+    max-width: 48rem;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 2rem auto;
 }
 
 .simbolo_imagen--escudo img,
 .escudo_img img {
-    max-width: 36rem;
-    margin: 0 auto;
+    max-width: 24rem;
 }
 
 .simbolo_texto {
-    font-size: 1.95rem;
-}
-
-.simbolo_texto h3 {
-    margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 .simbolo_texto p {
-    max-width: 58rem;
-}
-
-/* Mapa */
-#map {
-    text-align: center;
-    margin: 6rem 0;
-    padding: 4rem;
-    background: linear-gradient(135deg, #d9ebe4 0%, #eef6f1 100%);
-    border-radius: var(--radioGrande);
-    box-shadow: var(--sombraSuave);
-}
-
-#map h3 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
+    line-height: 1.7;
 }
 
 #map img {
     width: 100%;
-    max-width: 52rem;
+    max-width: 40rem;
+    height: auto;
     margin: 0 auto;
-    border-radius: 1.6rem;
-    box-shadow: var(--sombraMedia);
 }
 
-/* Lista destacada */
-.lista_destacados {
-    margin-top: 4rem;
-    padding: 4rem;
-    background: linear-gradient(135deg, #d8e7df 0%, #e8f2ec 100%);
-    border-radius: var(--radioGrande);
-    box-shadow: var(--sombraSuave);
-}
-
-.lista_destacados h3 {
-    margin-bottom: 1.5rem;
-}
-
-.lista_destacados ul {
-    columns: 2;
-    column-gap: 4rem;
-}
-
-.lista_links a {
-    color: var(--verdePrincipal);
-    text-decoration: none;
-    font-weight: 700;
-    transition: opacity 0.2s ease, color 0.2s ease;
-}
-
-.lista_links a:hover {
-    color: var(--verdeOscuro);
-    opacity: 0.9;
+#map {
+    padding: 3rem;
+    margin: 5rem 0;
 }
 
 /* Galería */
+
 .galeria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -351,9 +348,13 @@ h4 {
 
 .galeria figure {
     margin: 0;
+
     background-color: rgba(255, 255, 255, 0.45);
+
     padding: 1.2rem;
+
     border-radius: 1.4rem;
+
     box-shadow: var(--sombraSuave);
 }
 
@@ -362,71 +363,29 @@ h4 {
     height: 28rem;
     object-fit: cover;
     border-radius: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
 .galeria img:hover {
     transform: scale(1.03);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.20);
-}
 
-.galeria figcaption {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    color: var(--textoOscuro);
-}
-
-/* Atractivos */
-.atractivo_individual {
-    margin: 2rem 0 4rem 0;
-    padding: 2.8rem;
-    background: rgba(255, 255, 255, 0.42);
-    border-radius: var(--radioMedio);
-    box-shadow: var(--sombraSuave);
-}
-
-.atractivo_individual img {
-    width: 100%;
-    max-width: 82rem;
-    border-radius: 1.2rem;
-    margin-bottom: 1.5rem;
-    box-shadow: var(--sombraMedia);
-}
-
-main h3 {
-    margin-top: 4rem;
-    margin-bottom: 1.5rem;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.20);
 }
 
 /* Gastronomía */
-.gastronomia__imagen {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.gastronomia__imagen img {
-    width: 90%;
-    max-width: 85rem;
-    margin: 0 auto;
-    border-radius: 1.2rem;
-    box-shadow: var(--sombraMedia);
-}
-
-.restaurante {
-    padding: 3rem 0;
-    border-bottom: 2px solid rgba(44, 102, 69, 0.12);
-}
-
-.restaurante:last-of-type {
-    border: none;
-}
 
 .restaurante {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
+
     column-gap: 2.5rem;
     align-items: center;
+
+    padding: 3rem 0;
+
+    border-bottom: 2px solid rgba(0,0,0,0.08);
 }
 
 .restaurante__imagen img {
@@ -434,43 +393,45 @@ main h3 {
     height: 28rem;
     object-fit: cover;
     border-radius: 1.2rem;
+
     box-shadow: var(--sombraMedia);
 }
 
-.restaurante__informacion {
-    font-weight: normal;
-    font-size: 1.9rem;
-}
+/* Contacto */
 
-.restaurante__informacion h4 {
-    margin-bottom: 1rem;
-}
-
-/* Formulario */
 .contacto-bg {
     background-image: url(../imagenes/yauco_letras.jpg);
+
     height: 32rem;
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
     border-radius: 1.6rem;
+
     box-shadow: var(--sombraMedia);
 }
 
 .formulario {
-    background: rgba(44, 102, 69, 0.25); /* verde transparente */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(212, 160, 23, 0.18);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
     color: var(--textoOscuro);
 
     margin: -6rem auto 0 auto;
+
     width: min(95%, 90rem);
+
     padding: 4rem;
+
     border-radius: 2rem;
 
-    border: 1px solid rgba(255,255,255,0.25);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.35);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
 .campo {
@@ -480,18 +441,24 @@ main h3 {
 
 .campo__field {
     flex: 1;
-    border: 1px solid rgba(255,255,255,0.4);
+
+    border: 1px solid rgba(255,255,255,0.30);
+
     padding: 1.5rem;
+
     font-size: 1.6rem;
+
     border-radius: .8rem;
+
     font-family: var(--fuenteParrafo);
 
-    background: rgba(255,255,255,0.15);
-    color: #fff;
+    background: rgba(255,255,255,0.25);
+
+    color: var(--textoOscuro);
 }
 
 .campo__field::placeholder {
-    color: rgba(255,255,255,0.7);
+    color: rgba(60, 45, 10, 0.75);
 }
 
 .campo__field--textarea {
@@ -500,54 +467,54 @@ main h3 {
 }
 
 /* Botones */
+
 .boton {
     display: inline-block;
+
     font-family: var(--fuenteHeading);
+
     color: var(--blanco);
+
     text-align: center;
+
     padding: 1rem 3rem;
+
     font-size: 1.8rem;
+
     font-weight: 700;
+
     border: none;
+
     cursor: pointer;
+
     border-radius: 1rem;
-    transition: background 0.25s ease, transform 0.2s ease;
+
+    transition: background 0.25s ease,
+                transform 0.2s ease;
 }
 
 .boton--primario {
-    background-color: #2c6645;
+    background-color: var(--negro);
 }
 
 .boton--primario:hover {
-    background-color: #1f4f35;
+    background-color: var(--dorado);
+    color: var(--negro);
+
     transform: translateY(-2px);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.contacto-bg {
-    width: 100%;
-    height: 30rem;
-    background-size: cover;
-    background-position: center;
-}
-
-.contacto-bg {
-    border-radius: 2rem;
-    overflow: hidden;
 }
 
 /* Multimedia */
 
 .multimedia {
     margin: 5rem 0;
+
     padding: 3rem;
+
     background: rgba(255, 255, 255, 0.42);
+
     border-radius: 2rem;
+
     box-shadow: var(--sombraSuave);
 }
 
@@ -555,34 +522,75 @@ img {
     width: 100%;
     max-width: 85rem;
     height: auto;
+
     display: block;
+
     margin: 2rem auto 0 auto;
+
     border-radius: 1.4rem;
+
     box-shadow: var(--sombraMedia);
 }
 
-.multimedia audio {
+/* Ajuste para separar textos e imágenes en atractivos */
+.atractivo_individual {
+    margin: 2rem 0 5rem 0;
+    padding: 2.8rem;
+    background: rgba(255, 255, 255, 0.42);
+    border-radius: var(--radioMedio);
+    box-shadow: var(--sombraSuave);
+}
+
+.atractivo_individual img {
     width: 100%;
-    max-width: 60rem;
-    display: block;
-    margin-top: 2rem;
+    max-width: 70rem;
+    height: auto;
+    border-radius: 1.2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombraMedia);
+}
+
+.atractivo_individual p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    line-height: 1.7;
+}
+
+main h3 {
+    margin-top: 5rem;
+    margin-bottom: 1.8rem;
 }
 
 /* Footer */
+
 .footer {
-    background: linear-gradient(180deg, rgba(44, 102, 69, 0.95) 0%, rgba(31, 79, 53, 0.98) 100%);
+    background: linear-gradient(
+        180deg,
+        #111111 0%,
+        #1d1d1d 100%
+    );
+
     padding: 2rem 0 3rem 0;
+
     margin-top: 5rem;
 }
 
 .footer .barra {
     position: static;
+
     margin-top: 0;
+
     padding: 1rem 0 0 0;
+
     background: transparent;
+
     backdrop-filter: none;
+
     border: none;
+
     border-radius: 0;
+
     box-shadow: none;
 }
 
@@ -593,34 +601,13 @@ img {
 }
 
 .footer .enlace_nav:hover {
-    background: rgba(255, 255, 255, 0.10);
-    color: var(--blanco);
-}
-
-/* Anchors */
-#yaucromatic,
-#lago-luchetti,
-#salto-santa-clara,
-#cerro-rodadero,
-#casco-urbano {
-    scroll-margin-top: 16rem;
-}
-
-/* Animaciones */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    background: rgba(255,255,255,0.10);
 }
 
 /* Responsive */
+
 @media (max-width: 900px) {
-    .simbolo_contenido,
+
     .restaurante {
         grid-template-columns: 1fr;
     }
@@ -628,13 +615,10 @@ img {
     .galeria {
         grid-template-columns: 1fr;
     }
-
-    .lista_destacados ul {
-        columns: 1;
-    }
 }
 
 @media (max-width: 767px) {
+
     h1 {
         font-size: 4.4rem;
     }
@@ -662,39 +646,11 @@ img {
         width: 100%;
     }
 
-    .main__text main,
-    .simbolo_bloque,
-    #map,
-    .lista_destacados,
-    .atractivo_individual {
-        padding: 2.4rem;
-    }
-
-    .header {
-        min-height: 18rem;
-    }
-
-    .header__text {
-        padding-top: 1rem;
-    }
-
     .header__text h2 {
         font-size: 3.2rem;
     }
 
-    .simbolo_imagen img {
-        max-width: 100%;
+    .contacto-bg {
+        height: 20rem;
     }
-
-    .escudo_img img {
-        max-width: 26rem;
-    }
-
-    .subtitulo {
-    font-size: 2rem;
-    color: #5f6f66;
-    margin-top: 0.5rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-}
 }
